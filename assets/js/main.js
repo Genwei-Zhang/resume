@@ -35,4 +35,35 @@ jQuery(document).ready(function($) {
 	  }, 400); // Delay for the fade out duration
 	});
   });  
-  
+
+
+(function($, document) {
+	// get tallest tab__content element
+	let height = -1;
+
+	  $('.tab__content').each(function() {
+		  height = height > $(this).outerHeight() ? height : $(this).outerHeight();
+	   $(this).css('position', 'absolute');
+	  });
+	
+	// set height of tabs + top offset
+	  $('[data-tabs]').css('min-height', height + 40 + 'px');
+ 
+}(jQuery, document));
+
+
+$(document).ready(function() {
+    adjustWorkSection();
+
+    $('input[type="radio"][name="tabgroup"]').on('change', adjustWorkSection);
+    
+    function adjustWorkSection() {
+        var activeTabContent = $('input[type="radio"][name="tabgroup"]:checked').parent().find('.tab__content');
+        var activeTabHeight = activeTabContent.outerHeight();
+        var paddingTop = activeTabHeight + 30; // 30px additional margin, adjust as needed
+        $('.ds-work-section').css('paddingTop', paddingTop + 'px');
+    }
+
+    // Optional: Adjust the padding when the window is resized, in case of responsive design
+    $(window).on('resize', adjustWorkSection);
+});

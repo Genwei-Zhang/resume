@@ -137,83 +137,193 @@ svg,img { max-width: 100%; height: auto; }
   }
   .ds-numbervalulist strong .smaller-text {
 	font-size: 18px; /* adjust this value to change the size of "year" */
-	padding-left: 10px;
+	padding-left: 20px;
   }
-  
 /*-----------------------------------------------------------------
   3. >>> About Style
 ----------------------------------------------------------------*/
-.ds-about-section{ padding-top: 60px; padding-bottom: 120px; }
-.ds-heading{ display: inline-block; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; border-bottom: 3px solid #F26464; padding-bottom: 7px; margin-bottom: 23px; }
-.ds-about-section p{ color: #373737; font-size: 24px; line-height: 40px; font-weight: 300; margin-bottom: 60px; }
-
-.ds-button{ display: inline-block; text-transform: uppercase;font-size: 12px;line-height: 13px;font-weight: 600;letter-spacing: 3px; color:#F26464; padding:17px 30px;  border: 2px solid #F26464;border-radius: 60px; }
-.ds-button:hover{ background-color:#F26464 ; color: #FFF; }
-.ds-arrow-button i{ display: inline-block; vertical-align: middle; }
+/* Here, you can modify the padding to adjust the vertical space on top and bottom of the about section. */
+.ds-about-section{ 
+	padding-top: 60px; 
+	padding-bottom: 0px; 
+}
+/* The heading style for the About section. The margin-bottom can be adjusted to increase or decrease the space below the heading. */
+.ds-heading{ 
+	display: inline-block; 
+	font-weight: 700; 
+	color: #000; 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	font-size: 16px; 
+	border-bottom: 3px solid #F26464; 
+	padding-bottom: 7px; 
+	margin-bottom: 23px; 
+}
+/* This is the style for the paragraphs in the About section. The margin-bottom can be adjusted to increase or decrease the space between paragraphs. */
+.ds-about-section p{ 
+	color: #373737; 
+	font-size: 24px; 
+	line-height: 40px; 
+	font-weight: 300; 
+	margin-bottom: 60px; 
+}
+/* These are the styles for the buttons in the About section. The padding can be adjusted to change the size of the buttons. */
+.ds-button{ 
+	display: inline-block; 
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 13px;
+	font-weight: 600;
+	letter-spacing: 3px; 
+	color:#F26464; 
+	padding:17px 30px;  
+	border: 2px solid #F26464;
+	border-radius: 60px; 
+}
+/* This style applies when the mouse hovers over a button. The colors are being changed. */
+.ds-button:hover{ 
+	background-color:#F26464 ; 
+	color: #FFF; 
+}
+/* This is the style for a specific arrow button in the About section. */
+.ds-arrow-button i{ 
+	display: inline-block; 
+	vertical-align: middle; 
+}
+/* This style is for the additional space in between the paragraphs. The margin-top can be adjusted to increase or decrease the space. */
 .extra-space {
-	margin-top: -40px; /* Adjust this value to increase or decrease the space */
-	font-size: 24px; /* Maintain font size as in the previous paragraph */
-	line-height: 40px; /* Maintain line height as in the previous paragraph */
-	font-weight: 300; /* Maintain font weight as in the previous paragraph */
-	color: #373737; /* Maintain color as in the previous paragraph */
-  }
+	margin-top: -40px; 
+	font-size: 24px; 
+	line-height: 40px; 
+	font-weight: 300; 
+	color: #373737; 
+}
+/* This is the style for the button container in the About section. This is used to layout the buttons horizontally and aligned at the start. */
 .ds-button-container {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-  }
-  
-  .ds-button-sec {
-	margin-top: 60px;  /* Adjust this value to move the button vertically. Negative values allowed. */
-	margin-left: auto; /* Adjust this value to move the button horizontally. Negative values allowed. */
+}
+/* This is the style for a secondary button in the About section. The margins can be adjusted to move the button vertically or horizontally. */
+.ds-button-sec {
+	margin-top: 60px; 
+	margin-left: 65px; 
 	text-align: center;
-  }
+}
 /*-----------------------------------------------------------------
   4. >>> project switch tab
 ----------------------------------------------------------------*/
 .tabs {
-	display: flex;
-  }
-  
-  .tab {
-	margin-right: 10px;
-	cursor: pointer;
-	padding: 10px;
-  }
-  
-  .tab:hover {
-	background-color: lightgray;
-  }
-  
-  .tabcontent {
-	display: none;
-  }
-  
-  .tabcontent.active {
-	display: block;
-  }
-/*-----------------------------------------------------------------
-  4. >>> Skills Style
-----------------------------------------------------------------*/
-.ds-skills-section{ padding-bottom: 105px; }
-.ds-skills-list{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; margin-top: 11px; }
-.ds-skills-list li{ display: inline-block; color: #373737; font-size: 16px; padding:10px 20px; background-color: #FFF; border: 1px solid #D7D7D7;
-  border-radius: 27px; margin-right: 15px; margin-bottom: 15px;  font-weight: 500;}
+    clear: both;
+    position: relative;   
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.tab {
+    float: left;
+}
+.tab label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 550;
+    margin-right: 20px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    color: #333;
+    text-transform: uppercase;
+}
+.tab [type=radio] {
+    display: none;   
+}
+.tab__content {
+    position: relative;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity .2s cubic-bezier(.42,0,.34,1.01);
+    opacity: 0;
+}
+.content-block {
+    padding: 40px 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.content-block:last-child {
+    border-bottom: none; 
+}
+.tabs {
+    margin-bottom: 50px;
+}
+[type=radio]:checked ~ label {
+    border-bottom: 3px solid #F26464;
+    color: #1d1d1d;
+    z-index: 2;
+}
+[type=radio]:checked ~ label ~ .tab__content {
+    z-index: 1;
+    opacity: 1;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* for 16:9 aspect ratio */
+    margin-bottom: 10px;
+}
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button-wrapper {
+    padding: 20px 0; /* Add vertical padding around the buttons */
+    display: flex;
+    justify-content: space-around;
+}
+.cycle-button {
+    display: flex; /* Makes the buttons horizontal */
+    justify-content: space-between; /* Adds space between the buttons */
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes any default padding */
+    width: 100%; /* Makes the buttons span the entire width of the .button-wrapper */
+}
+.cycle-button li {
+    flex-basis: 30%; /* Makes each button take up 30% of the width of the .cycle-button */
+    text-align: center; /* Centers the text within each button */
+    padding: 10px; /* Adds some padding around the text in each button */
+}
+.video-caption {
+    margin-top: 20px; /* Adds some space between the buttons and the caption */
+	margin-bottom: 10px;
+}
 
-/*-----------------------------------------------------------------
-  5. >>> Experience Style
-----------------------------------------------------------------*/
-.ds-experience-section{ padding-bottom: 120px; }
-.ds-experience-list section{ padding-right: 70px; }
-.ds-experience-list{ padding-top: 15px; }
-.ds-officename{ font-size: 24px; font-weight: 300; margin-bottom:10px; }
-.ds-experience-list span{ display: block; }
-span.ds-year{ color: #373737; font-size: 14px; font-weight: 700; padding-bottom: 10px; }
-span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-bottom: 30px; }
-.ds-experience-list p{ font-size: 16px; line-height: 24px; font-weight: 300; }
-.ds-experience-list ul{ list-style: none; padding: 0; margin: 0; padding-top: 10px; }
-.ds-experience-list ul li{font-size: 16px; line-height: 24px; font-weight: 300; padding-left: 28px; position:relative; margin-bottom: 20px;}
-.ds-experience-list ul li:before{ content: ""; position: absolute; left: 0; top: 10px; border-radius: 100%; width: 8px; height: 8px; background-color: #373737; }
+.image_container{
+	width: 100%;
+	height: 100vh;
+	background: #222;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+.swiper{
+	width: 80%;
+	height: fit-content;
+}
+.swiper-slide img{
+	width: 100%;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+	color: #FFF;
+}
+.swiper .swiper-button-prev:hover, .swiper .swiper-button-next:hover {
+    filter: brightness(0.95); /* adjust the value to change the brightness */
+}
+.swiper .swiper-pagination-bullet-active{
+	background-color: #FFF;
+}
+
 /*-----------------------------------------------------------------
   6. >>> Work Style
 ----------------------------------------------------------------*/

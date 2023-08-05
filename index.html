@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Genwei Zhang, genwei, genwei zhang">
     <meta name="description" content="Genwei Zhang's personal Projects display">
-      <!-- Google Fots -->
+    <!-- Google Fots -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- Main CSS -->
-      <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
     <title>Genwei Zhang's project display </title>
   </head>
@@ -62,7 +64,7 @@
                 <h1>
                   <span class="uppercase">Welcome there</span>
                   <span class="name">Genwei Zhang</span> <span class="small-text">here</span>
-                  <br> <span class="small-text second-line">Feel free to browse my projects <br> click the resume button for more info </span>
+                  <br> <span class="small-text second-line">Feel free to browse my projects <br> click resume button for more info </span>
                 </h1>
 
                 <div class="ds-button-container">
@@ -77,7 +79,7 @@
                       </li>
                   </ul>
                   <div class="ds-button-sec text-center">
-                      <a href="genwei_zhanag_resume.pdf" class="ds-button">Resume</a>
+                    <a href="genwei_zhanag_resume.pdf" class="ds-button" target="_blank">Resume</a>
                   </div>
               </div>
             </section>
@@ -115,92 +117,83 @@
     </div>
     <!-- about -->
 
-    <!-- project switch tab -->
-    <div class="tabs">
-      <button class="tab" id="coursework-tab">Course Work</button>
-      <button class="tab" id="fun-tab">Fun</button>
-    </div>
-    
-    <div id="tab-content">
-      <div id="coursework-content" class="tabcontent">
-        <h2>Course Work</h2>
-        <p>This is where you will put your course work content.</p>
-      </div>
-    
-      <div id="fun-content" class="tabcontent">
-        <h2>Fun</h2>
-        <p>This is where you will put your fun content.</p>
-      </div>
-    </div>    
-    <!-- project switch tab -->
+  <!-- project switch tab -->
+  <div data-tabs class="tabs">    
+    <div class="tab">
+      <input type="radio" name="tabgroup" id="tab-1" checked>
+      <label for="tab-1">fun project</label>
+      <div class="tab__content">
+          <div class="content-block">
+              <h4>online chat app development</h4>
+              <div class="video-wrapper">
+                  <iframe src="https://www.youtube.com/embed/lpWeb-En5Gc" class="project-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
 
-    <!--  Skills -->
-    <div class="ds-skills-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-             <h2 class="ds-heading">Core Skills</h2>
-             <ul class="ds-skills-list">
-               <li>JavaScript</li>
-               <li>Node.js</li>
-               <li>Express.js</li>
-               <li>MongoDB</li>
-               <li>Vue.js</li>
-               <li>React</li>
-               <li>Sequelize</li>
-               <li>Github</li>
-               <li>HTML</li>
-             </ul>
+              <div class="image_container">
+                <!-- Slider main container -->
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="assets/image_mine/1 (1).jpg"></div>
+                    <div class="swiper-slide"><img src="assets/image_mine/1 (2).jpg"></div>
+                    <div class="swiper-slide"><img src="assets/image_mine/1 (3).jpg"></div>
+                    <div class="swiper-slide"><img src="assets/image_mine/1 (4).jpg"></div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <!-- If we need scrollbar -->
+                  <div class="swiper-scrollbar"></div>
+                </div>
+              </div>
+
+              <div class="button-wrapper">
+                <ul class="cycle-button">
+                    <li><a href="file1.pdf" class="ds-button" target="_blank">projects</a></li>
+                    <li><a href="file2.pdf" class="ds-button" target="_blank">Button 2</a></li>
+                    <li><a href="file3.pdf" class="ds-button" target="_blank">Button 3</a></li>
+                </ul>
+              </div>
+              <h2 class="video-caption">Caption/Title</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+              </p>
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <h2 class="ds-heading">Other Skills</h2>
-            <ul class="ds-skills-list">
-              <li>Storyblok</li>
-              <li>PWAs</li>
-              <li>Responsive Web Design</li>
-              <li>React</li>
-              <li>Vuetify</li>
-            </ul>
-          </div>
-        </div>
+              <div class="content-block">
+                  <h4>project 2</h4>
+                  <div class="video-wrapper">
+                      <iframe src="https://www.youtube.com/embed/lpWeb-En5Gc" class="project-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <h2 class="video-caption">Caption/Title</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+              </div>
+          </div> 
+      </div>
+  
+      <!-- Similar structure for other tabs -->
+
+      <div class="tab">
+          <input type="radio" name="tabgroup" id="tab-2">
+          <label for="tab-2">course work</label>
+          <div class="tab__content">
+              <!-- Copy of the first tab's content -->
+              <div class="content-block">
+                  <h4>project 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
+              </div>
+              <div class="content-block">
+                  <h4>project 2</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+              </div>
+          </div> 
       </div>
     </div>
-    <!--  Skills -->
-
-   <!-- Experience -->
-   <div class="ds-experience-section">
-     <div class="container">
-        <h2 class="ds-heading">Work Experience</h2>
-        <div class="row ds-experience-list">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2019 - Present</span>
-                <h3 class="ds-officename">Matrix Media Inc</h3>
-                <span class="ds-department">Full Stack developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                </ul>
-              </section>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2018 - 2019</span>
-                <h3 class="ds-officename">Lexind</h3>
-                <span class="ds-department">Senior app developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                </ul>
-              </section>
-            </div>
-        </div>
-     </div>
-   </div>
-    <!-- Experience -->
+    <!-- project switch tab -->
 
    <!--  Work -->
    <div class="ds-work-section">
@@ -235,20 +228,6 @@
                   </div>
               </div>
             </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Cute cookies app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                       <figure><img src="assets/images/work-3.jpg"></figure>
-                  </div>
-              </div>
-            </div>
           </div>
      </div>
    </div>
@@ -278,5 +257,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    </script>
   </body>
 </html>
