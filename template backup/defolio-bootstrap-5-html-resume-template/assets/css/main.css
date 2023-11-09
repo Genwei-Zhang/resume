@@ -1,5 +1,5 @@
 /*
-Theme Name: Jason Stroff
+Theme Name: Genwei Zhang
 
   1. >>> Headr Style
   2. >>> Banner Style
@@ -23,8 +23,7 @@ iframe {border: 0;outline: none;}
 img {max-width: 100%;border: none;outline: none;height: auto;}
 input,textarea {border-radius: 0;resize: none;}
 ul {padding: 0;margin: 0;}
-@font-face {
-font-family: 'Inter', sans-serif;}
+/* @font-face {font-family: 'Inter', sans-serif;} */
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {background-color: transparent;background-image: none;color:#000;}
 /* 1.2 Typography */
 h1,h2,h3,h4,h5,h6 {font-family: 'Inter', sans-serif;}
@@ -34,84 +33,319 @@ svg,img { max-width: 100%; height: auto; }
 /*-----------------------------------------------------------------
   1. >>> Headr Style
 ----------------------------------------------------------------*/
-.ds-header{ position: fixed; top: 0; width: 100%; z-index: 5; background-color: #FFF; padding: 70px 0;transition-delay: 0s;transition-duration: 0.4s;transition-property: all;transition-timing-function: ease; }
-.ds-header.ds-fixed-header{ padding:20px 0;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); }
-.ds-header-inner{ display: flex; justify-content: space-between; align-items: center; }
-.ds-logo{ text-transform: uppercase; font-size: 18px; letter-spacing: 3px; color: #000; display: flex; align-items: center; }
-.ds-logo span{ display:flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #000; border-radius: 4px; color: #FFF; font-size: 22px; font-weight: 600; text-align: center; margin-right: 12px; }
+.ds-header{ position: fixed; top: 0; width: 100%; z-index: 5;
+	 background-color: #FFF; padding: 15px 0;
+	 transition: none;
+	 transition-delay: 0s;transition-duration: 0.4s;
+	 transition-property: all;transition-timing-function: ease; }
+.ds-header.ds-fixed-header{ padding:7px 0;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); }
+.ds-header-inner{ display: flex; justify-content: space-between;
+	 align-items: center; }
+.ds-logo{ 
+	/* text-transform: uppercase; */
+	 font-size: 18px; letter-spacing: 3px; color: #000;
+	  display: flex; align-items: center; }
+.ds-logo span{ display:flex; align-items: center;
+	justify-content: center; width: 55px; height: 35px;
+	background-color: #222222; border-radius: 4px;
+	color: #FFF; font-size: 22px; font-weight: 600;
+	text-align: center; margin-right: 12px; }
 .ds-logo:hover{ color: #000; }
 
 .ds-social{ list-style: none; display: flex; align-items: center; flex-wrap: wrap; }
 .ds-social li{ margin-left: 12px; }
 .ds-social li:first-child{ margin-left: 0; }
-.ds-social li a{ border-radius: 100%; color: #FFF; width: 24px; height: 24px; background-color: #F26464; display:flex; justify-content: center; align-items: center; text-align: center; font-size: 16px; }
-.ds-social li a:hover{ background-color: #000; color: #FFF; }
+.ds-social li a{ border-radius: 100%; color: #FFF;
+	width: 28px; height: 28px; background-color: #F26464;
+	display:flex; justify-content: center; align-items: center;
+	text-align: center; font-size: 20px; }
+.ds-social li a:hover{ background-color: #000; color: #FFF;}
 /*-----------------------------------------------------------------
   2. >>> Banner Style
 ----------------------------------------------------------------*/
-.ds-banner section{ padding-left: 70px; padding-right: 100px; }
-.ds-banner section h1 span{ display: block; text-transform: uppercase; letter-spacing: 1px;  font-weight: 500; font-size: 16px; padding-bottom: 30px; }
-.ds-banner section h1{ font-weight: 600; font-size: 48px; line-height: 60px; color: #000; }
-.ds-numbervalulist{ list-style: none; display: flex; align-items: center; flex-wrap: wrap; margin: 0; padding: 0; margin-top: 60px; }
-.ds-numbervalulist li{ margin-right: 60px; }
-.ds-numbervalulist li:last-child{ margin-right: 0; }
-.ds-numbervalulist strong{ display: block; color: #F26464; font-size: 36px; font-weight: 800; }
-.ds-numbervalulist span{ font-size: 16px; letter-spacing: 1px; }
+#myImage {
+	transition: opacity 0.4s ease, filter 0.3s ease;
+  }
+  .hidden {
+	opacity: 0;
+  }
+  #myImage:hover {
+	filter: brightness(1.1); /* Makes the image 10% brighter */
+  }
+  .ds-banner section {
+	padding-left: 70px;
+	padding-right: 100px;
+  }
+  .ds-banner section h1 .uppercase {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 16px;
+	padding-bottom: 30px;
+  }
+  .ds-banner section h1 .name, 
+  .ds-banner section h1 .small-text,
+  .ds-banner section h1 .second-line {
+	text-transform: none;
+  }
+  .ds-banner section h1 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 40px;
+	color: #000;
+  }
+  .ds-banner section h1 .name {
+	font-weight: 600;
+	font-size: 36px; /* Same size as Genwei Zhang */
+  }
+  .ds-banner section h1 .small-text {
+	font-size: 19px; /* adjust this value to change the size of "here" and the second line */
+  }
+  .ds-banner section h1 .second-line {
+	font-size: 23px; /* adjust this value to change the size of the second line */
+	margin-top: -70px; /* adjust this value to change the space before the second line */
+	margin-bottom: 10px; /* adjust this value to change the space after the second line */
+  }
+  .ds-numbervalulist {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	margin-top: 60px;
+  }
+  .ds-numbervalulist li {
+	margin-right: 60px;
+  }
+  .ds-numbervalulist li:last-child {
+	margin-right: 0;
+  }
+  .ds-numbervalulist strong {
+	display: block;
+	color: #F26464;
+	font-size: 36px;
+	font-weight: 800;
+  }
+  .ds-numbervalulist span {
+	font-size: 16px;
+	letter-spacing: 1px;
+  }
+  .ds-numbervalulist strong .larger-text {
+	font-size: 36px; /* adjust this value to change the size of "4+" */
+  }
+  .ds-numbervalulist strong .smaller-text {
+	font-size: 18px; /* adjust this value to change the size of "year" */
+	padding-left: 20px;
+  }
 /*-----------------------------------------------------------------
   3. >>> About Style
 ----------------------------------------------------------------*/
-.ds-about-section{ padding-top: 60px; padding-bottom: 120px; }
-.ds-heading{ display: inline-block; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; border-bottom: 3px solid #F26464; padding-bottom: 7px; margin-bottom: 23px; }
-.ds-about-section p{ color: #373737; font-size: 24px; line-height: 40px; font-weight: 300; margin-bottom: 60px; }
-
-.ds-button{ display: inline-block; text-transform: uppercase;font-size: 12px;line-height: 13px;font-weight: 600;letter-spacing: 3px; color:#F26464; padding:17px 30px;  border: 2px solid #F26464;border-radius: 60px; }
-.ds-button:hover{ background-color:#F26464 ; color: #FFF; }
-.ds-arrow-button i{ display: inline-block; vertical-align: middle; }
+/* Here, you can modify the padding to adjust the vertical space on top and bottom of the about section. */
+.ds-about-section{ 
+	padding-top: 60px; 
+	padding-bottom: 0px; 
+}
+/* The heading style for the About section. The margin-bottom can be adjusted to increase or decrease the space below the heading. */
+.ds-heading{ 
+	display: inline-block; 
+	font-weight: 700; 
+	color: #000; 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	font-size: 16px; 
+	border-bottom: 3px solid #F26464; 
+	padding-bottom: 7px; 
+	margin-bottom: 23px; 
+}
+/* This is the style for the paragraphs in the About section. The margin-bottom can be adjusted to increase or decrease the space between paragraphs. */
+.ds-about-section p{ 
+	color: #373737; 
+	font-size: 24px; 
+	line-height: 40px; 
+	font-weight: 300; 
+	margin-bottom: 60px; 
+}
+/* These are the styles for the buttons in the About section. The padding can be adjusted to change the size of the buttons. */
+.ds-button{ 
+	display: inline-block; 
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 13px;
+	font-weight: 600;
+	letter-spacing: 3px; 
+	color:#F26464; 
+	padding:17px 30px;  
+	border: 2px solid #F26464;
+	border-radius: 60px; 
+}
+/* This style applies when the mouse hovers over a button. The colors are being changed. */
+.ds-button:hover{ 
+	background-color:#F26464 ; 
+	color: #FFF; 
+}
+/* This is the style for a specific arrow button in the About section. */
+.ds-arrow-button i{ 
+	display: inline-block; 
+	vertical-align: middle; 
+}
+/* This style is for the additional space in between the paragraphs. The margin-top can be adjusted to increase or decrease the space. */
+.extra-space {
+	margin-top: -40px; 
+	font-size: 24px; 
+	line-height: 40px; 
+	font-weight: 300; 
+	color: #373737; 
+}
+/* This is the style for the button container in the About section. This is used to layout the buttons horizontally and aligned at the start. */
+.ds-button-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/* This is the style for a secondary button in the About section. The margins can be adjusted to move the button vertically or horizontally. */
+.ds-button-sec {
+	margin-top: 60px; 
+	margin-left: 65px; 
+	text-align: center;
+}
 /*-----------------------------------------------------------------
-  4. >>> Skills Style
+  4. >>> project switch tab
 ----------------------------------------------------------------*/
-.ds-skills-section{ padding-bottom: 105px; }
-.ds-skills-list{ list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; margin-top: 11px; }
-.ds-skills-list li{ display: inline-block; color: #373737; font-size: 16px; padding:10px 20px; background-color: #FFF; border: 1px solid #D7D7D7;
-  border-radius: 27px; margin-right: 15px; margin-bottom: 15px;  font-weight: 500;}
+.tabs {
+    clear: both;
+    position: relative;   
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.tab {
+    float: left;
+    border-right: 1px solid #aaa;  /* Adjusts the color and width of the line */
+    height: 10%;                   /* Adjusts the length of the line, 50% is just an example value */
+    padding-left: 18px;            /* Adjusts the left padding */
+    padding-right: 0px;           /* Adjusts the right padding; also affects the position of the vertical line */
+}
+.tab label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 550;
+    margin-right: 20px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 22px; /* Adjust this value to change the font size */
+}
+.tab [type=radio] {
+    display: none;   
+}
+.tab__content {
+    position: relative;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity .2s cubic-bezier(.42,0,.34,1.01);
+    opacity: 0;
+}
+.content-block {
+    padding: 20px 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.content-block h4 {
+    background-color: #242424; /* Adjust this value to change the background color */
+    color: white;
+    padding: 8px 13px; /* Adjust these values to change the padding around the text */
+    margin-bottom: 15px; /* Adjust this value to change the bottom margin */
+    display: inline-block; /* This will make the background only as wide as the text itself. Remove if you want the background to be full width */
+    border-radius: 5px; /* Optional: to make the corners rounded */
+    font-size: 22px; /* Adjust this value to change the font size */
+}
+.content-block:last-child {
+    border-bottom: none; 
+}
+.tab__content .content-block:last-child {
+    margin-bottom: 50px; 
+}
+[type=radio]:checked ~ label {
+    border-bottom: 3px solid #F26464;
+    color: #1d1d1d;
+    z-index: 2;
+}
+[type=radio]:checked ~ label ~ .tab__content {
+    z-index: 1;
+    opacity: 1;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* for 16:9 aspect ratio */
+    margin-bottom: 35px;
+}
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button-wrapper {
+    padding: 20px 0; /* Add vertical padding around the buttons */
+    display: flex;
+    justify-content: space-around;
+}
+.cycle-button {
+    display: flex; /* Makes the buttons horizontal */
+    justify-content: space-between; /* Adds space between the buttons */
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes any default padding */
+    width: 100%; /* Makes the buttons span the entire width of the .button-wrapper */
+}
+.cycle-button li {
+    flex-basis: 30%; /* Makes each button take up 30% of the width of the .cycle-button */
+    text-align: center; /* Centers the text within each button */
+    padding: 10px; /* Adds some padding around the text in each button */
+}
+.video-caption {
+    margin-top: 20px; /* Adds some space between the buttons and the caption */
+	margin-bottom: 10px;
+}
 
-/*-----------------------------------------------------------------
-  5. >>> Experience Style
-----------------------------------------------------------------*/
-.ds-experience-section{ padding-bottom: 120px; }
-.ds-experience-list section{ padding-right: 70px; }
-.ds-experience-list{ padding-top: 15px; }
-.ds-officename{ font-size: 24px; font-weight: 300; margin-bottom:10px; }
-.ds-experience-list span{ display: block; }
-span.ds-year{ color: #373737; font-size: 14px; font-weight: 700; padding-bottom: 10px; }
-span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-bottom: 30px; }
-.ds-experience-list p{ font-size: 16px; line-height: 24px; font-weight: 300; }
-.ds-experience-list ul{ list-style: none; padding: 0; margin: 0; padding-top: 10px; }
-.ds-experience-list ul li{font-size: 16px; line-height: 24px; font-weight: 300; padding-left: 28px; position:relative; margin-bottom: 20px;}
-.ds-experience-list ul li:before{ content: ""; position: absolute; left: 0; top: 10px; border-radius: 100%; width: 8px; height: 8px; background-color: #373737; }
-/*-----------------------------------------------------------------
-  6. >>> Work Style
-----------------------------------------------------------------*/
-.ds-work-section{ padding-bottom: 80px; }
-.ds-work-list{ padding-left: 70px; padding-top:40px; padding-right: 70px; background-color:#F6F8FA; margin-bottom: 40px; }
-.ds-work-list section{ padding-top: 20px; padding-right: 120px; }
-.ds-work-tilte{ color: #000; font-size: 30px; line-height: 36px; font-weight: 600; margin-bottom: 30px; }
-.ds-work-list p{ font-weight: 300; font-size: 18px; line-height: 30px; }
-.ds-work-list .ds-button{ margin-top: 20px; }
-
-.ds-work-det-hed{ padding-top: 42px; padding-bottom: 80px; }
-.ds-work-det-title{ font-weight: 600; color:#000; font-size: 48px; margin-bottom: 20px; }
-.ds-work-det-dep{ display:block;font-weight: 600; color: #000; font-size: 18px; }
-.ds-work-content-sec{ padding: 100px 0; }
-.ds-work-content-sec p{ font-size: 18px; line-height: 36px; margin-bottom: 30px; }
-.ds-work-content-sec h2{ font-size: 30px; font-weight: 700; margin-bottom: 30px; }
-.ds-work-content-sec ul{ list-style: none; padding: 0; margin: 0; }
-.ds-work-content-sec li{font-size: 18px; line-height: 36px;  padding-left: 28px; position:relative; margin-bottom: 20px;}
-.ds-work-content-sec li:before{ content: ""; position: absolute; left: 0; top: 13px; border-radius: 100%; width: 8px; height: 8px; background-color: #373737; }
+.image_container {
+    width: 100%;
+    height: 80vh;
+    background: #3d3d3d; /* Your specified background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+}
+.swiper-slide {
+    display: flex; /* Use flexbox to align images */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Take full height of the container */
+}
+.swiper-slide img {
+    width: auto; /* Adjust width automatically */
+    height: 100%; /* Full height of the slide */
+    object-fit: contain; /* Ensure the image is contained within the slide */
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+	color: #82b4ff;
+}
+.swiper .swiper-button-prev:hover, .swiper .swiper-button-next:hover {
+    filter: brightness(0.9); /* adjust the value to change the brightness */
+}
+.swiper .swiper-pagination-bullet-active{
+	background-color: #82b4ff;
+}
 /*-----------------------------------------------------------------
   7. >>> Footer Style
 ----------------------------------------------------------------*/
-.ds-footer{ background-color: #000; padding: 120px 0; }
+.ds-footer{ background-color: #000; padding: 120px 0; min-height: 300px}
 .ds-footer section { padding-bottom: 97px; }
 .ds-footer section span{ color: rgba(255,255,255,0.5); text-transform: uppercase; font-weight: 700; font-size: 16px; letter-spacing: 1px; display: block; padding-bottom: 20px; }
 .ds-footer section  h4{ color: #FFF; font-size: 48px; font-weight: 700; }
@@ -119,9 +353,6 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 .ds-copyright{ color: rgba(255,255,255,0.5); letter-spacing: 1px; font-size: 16px; }
 .ds-copyright a{color: rgba(255,255,255,0.5);}
 .ds-copyright a:hover{ color: #F26464; }
-
-
-
 /*-------------------------------------------------------------------------------
  Responsive XS Style @media (max-width: 767px) 
 -------------------------------------------------------------------------------*/
@@ -156,16 +387,10 @@ span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-b
 	.ds-work-content-sec{ padding: 30px 0; }
 	.ds-work-list section{ padding-right: 0; padding-bottom: 30px; }
 }
-
-
 @media (min-width: 768px) and (max-width: 991px) {
 	.ds-work-list section{ padding-right: 30px; }
-
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
 	.ds-banner section{ padding-right: 0; }
 	.ds-work-list section{ padding-right: 30px; padding-bottom:60px; }
-
-
 }
