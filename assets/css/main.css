@@ -218,6 +218,7 @@ svg,img { max-width: 100%; height: auto; }
     position: relative;   
     max-width: 1300px;
     margin: 0 auto;
+	margin-top: 150px; /* Add this line to add space above the tabs */
 }
 .tab {
     float: left;
